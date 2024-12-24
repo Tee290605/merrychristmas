@@ -1,0 +1,675 @@
+/* Thiết lập nền */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color:  #1e3c72; /* Màu nền xanh đậm */
+  }
+  
+  .snowflake {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    color: aliceblue;
+    animation: fall linear infinite;
+   
+  }
+  
+
+
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-10px);
+     
+    }
+    100% {
+      transform: translateY(100vh); /* Rơi xuống hết chiều cao màn hình */
+    
+    }
+  }
+   /* Hiệu ứng lắc lư */
+   @keyframes sway {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+  }
+.body{
+    position: relative;
+}
+  .div1{
+    position: absolute;
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: url(650.jpg);
+    visibility: hidden;/* Ẩn phần tử ban đầu */
+    opacity: 0; /* Đặt độ mờ ban đầu là 0 */
+    transform: translateY(-200px); /* Đặt vị trí ban đầu là một chút bên trên */
+    transition: opacity 1s ease, transform 1s ease; /* Thêm hiệu ứng chuyển tiếp */
+  }
+
+  .show {
+  visibility: visible; /* Hiển thị phần tử khi thêm class .show */
+    opacity: 1; /* Đặt độ mờ thành 1 */
+    transform: translateY(0); /* Đưa phần tử về vị trí ban đầu */
+  }
+
+  .clickme {
+    
+    margin-top: 70vh; /* Đặt button ở giữa theo chiều dọc */
+    margin-left: 50%; /* Đặt button ở giữa theo chiều ngang */
+    height: 100px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: aliceblue; /* Màu nền cho button */
+    color: rgb(4, 0, 0); /* Màu chữ */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer; /* Thêm con trỏ chuột khi hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Bóng đổ mềm hơn */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển động */
+    font-family: Playwrite România Guides;
+}
+.clickme {
+    font-size: 30px;
+
+}
+  .clickme:hover {
+    box-shadow: 0 0 30px rgba(142, 200, 218, 0.784); /* Tăng bóng khi hover */
+    transform: scale(1.05); /* Phóng to khi hover */
+ 
+}
+
+
+
+  .particle {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: white; /* Màu sắc của hạt */
+    border-radius: 50%; /* Hình dạng tròn */
+    opacity: 0.8; /* Độ trong suốt */
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-50px); /* Bắt đầu từ trên cùng */
+      opacity: 0; /* Mờ dần khi bắt đầu */
+    }
+    10% {
+      opacity: 1; /* Hiển thị rõ dần */
+    }
+    100% {
+      transform: translateY(100vh); /* Rơi hết chiều cao màn hình */
+      opacity: 0; /* Mờ dần khi kết thúc */
+    }
+}
+.hand i{
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+    margin-top: -100%;
+    margin-left: 57%;
+
+    animation: touched 2s ease-in-out infinite;
+}
+
+@keyframes touched {
+    0% {
+        transform: rotate(-30deg)  scale(1.0); /* Xoay 30 độ và giữ kích thước ban đầu */
+    }
+    50% {
+        transform: rotate(-30deg) scale(0.7); /* Xoay 30 độ và phóng to 20% */
+    }
+    100% {
+        transform: rotate(-30deg)  scale(1.0); /* Xoay 30 độ và giữ kích thước ban đầu */
+    }
+}
+@keyframes touch1 {
+    0%{
+        margin-top: 40vh;
+    margin-left: 30%;
+    font-size: 100px;
+    color: rgb(211, 233, 252);
+    text-shadow: 
+    1px 1px 0px rgb(214, 231, 246),  /* Viền trái trên */
+    -1px -1px 0px rgb(214, 231, 246), /* Viền phải dưới */
+    1px -1px 0px rgb(214, 231, 246),  /* Viền trái dưới */
+    -1px 1px 0px rgb(214, 231, 246);  /* Viền phải trên */
+    }
+    50%{
+        margin-top: 38vh;
+    margin-left: 28%;
+    font-size: 120px;
+    text-shadow: 
+    2px 2px 0px aliceblue,  /* Viền trái trên */
+    -2px -2px 0px aliceblue, /* Viền phải dưới */
+    2px -2px 0px aliceblue,  /* Viền trái dưới */
+    -2px 2px 0px aliceblue;  /* Viền phải trên */
+    }
+    100%{
+        margin-top: 40vh;
+    margin-left: 30%;
+    font-size: 100px;
+    color: rgb(211, 233, 252);
+    text-shadow: 
+    1px 1px 0px rgb(214, 231, 246),  /* Viền trái trên */
+    -1px -1px 0px rgb(214, 231, 246), /* Viền phải dưới */
+    1px -1px 0px rgb(214, 231, 246),  /* Viền trái dưới */
+    -1px 1px 0px rgb(214, 231, 246);  /* Viền phải trên */
+    }
+}
+
+ 
+  
+  
+  @keyframes sway {
+    0% {
+      transform:scale(1.0); /* Góc ban đầu */
+    }
+   
+    50% {
+      transform:scale(1.0)  ; /* Quay về vị trí ban đầu */
+    }
+   
+    100% {
+      transform:scale(1.0); /* Quay về vị trí ban đầu */
+    }
+  }
+
+  .cloud{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: -300px;
+    margin-left: -100px; 
+  }
+  .cloud1{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: -200px;
+    margin-left: 150px;
+    
+  }
+  .cloud2{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: -300px;
+    margin-left: 350px;
+  }
+  .cloud3{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: -300px;
+    margin-left: 600px;
+  }
+  .cloud4{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: -350px;
+    margin-left: 800px;
+  }
+  .cloud5{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: -300px;
+    margin-left: 1050px;
+  }
+  .cloud6{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: -350px;
+    margin-left: 1300px;
+  } 
+  .cloud7{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: 500px;
+    margin-left: -100px;
+  }
+  .cloud8{
+    position: absolute;
+    z-index: 3;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: 600px;
+    margin-left: 100px;
+  }
+  .cloud9{
+    position: absolute;
+    z-index: 3;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: 600px;
+    margin-left: 400px;
+  }
+  .cloud10{
+    position: absolute;
+    z-index: 3;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: 550px;
+    margin-left: 600px;
+  }
+  .cloud11{
+    position: absolute;
+    z-index: 3;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: 550px;
+    margin-left: 800px;
+  }
+  .cloud12{
+    position: absolute;
+    z-index: 3;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: 570px;
+    margin-left: 1000px;
+  }
+  .cloud13{
+    position: absolute;
+    z-index: 3;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-top: 470px;
+    margin-left: 1250px;
+  }
+  
+  .cloud,
+.cloud1,
+.cloud2,
+.cloud3,
+.cloud4,
+.cloud5,
+.cloud6 {
+  box-shadow: 10px 10px 30px rgba(255, 255, 255, 0.355); 
+}
+
+.cloud7,
+.cloud8,
+.cloud9,
+.cloud10,
+.cloud11,
+.cloud12,
+.cloud13{
+  box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.355); 
+}
+
+  .card {
+    cursor: pointer;
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    perspective: 1000px; /* Tạo hiệu ứng 3D */
+    margin-left: 40%;
+    margin-top: 4%;
+    z-index: 4;
+  visibility: hidden;
+    opacity: 0; /* Đảm bảo thẻ không hiển thị khi ẩn */
+    transition: opacity 1s ease; /* Thêm hiệu ứng mờ dần */
+}
+.di1{
+  position: relative;
+}
+.letter{
+  z-index: 4;
+  position: absolute;
+  display: none;
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin-top: 50%;
+  margin-left: 30%;
+  font-size: 100px;
+  color: rgb(211, 233, 252);
+  text-shadow: 
+  1px 1px 0px rgb(214, 231, 246),  /* Viền trái trên */
+  -1px -1px 0px rgb(214, 231, 246), /* Viền phải dưới */
+  1px -1px 0px rgb(214, 231, 246),  /* Viền trái dưới */
+  -1px 1px 0px rgb(214, 231, 246);  /* Viền phải trên */
+  transition: 0.5s ease;
+  cursor: pointer;
+  animation: touch1 6s linear infinite;
+}
+
+.card.show1 {
+  visibility: visible;
+  opacity: 1; /* Đặt độ mờ thành 1 khi thẻ hiển thị */
+}
+.card-front,
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 1s ease; /* Hiệu ứng lật mượt */
+}
+
+.card-front {
+    background-color: #ff5555;
+    color: white;
+    z-index: 2; /* Giữ mặt trước ở trên */
+    transform-origin: left; /* Lật từ cạnh trái */
+}
+
+.card-inner {
+    background-color: #ffffff;
+    color: #333;
+    z-index: 1; /* Đặt mặt trong ở dưới */
+    transform: rotateY(0deg); /* Ban đầu mặt trong xoay 180 độ */
+}
+
+/* Lật mặt trước khi có lớp active */
+.flip .card-front {
+    transform: rotatez(-5deg)  rotateY(-150deg) translateY(17px);
+
+    
+}
+
+.flip .card-inner {
+    transform:rotatez(-5deg)  rotateY(0deg); /* Đưa mặt trong về phía trước */
+  }
+
+
+  .cloud, .cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6  {
+    animation: moveClouds 20s ease-in-out infinite; /* Di chuyển mây */
+}
+
+@keyframes moveClouds {
+    0% { left: -200px; }
+    50%{ left: 0px}
+    100% { left: -200px; }
+}
+
+.moon{
+position: absolute;
+  height: 150px;
+  width: 150px;
+  background-color: yellow;
+  border-radius: 50%;
+  right: 100px;
+  top: 50px;
+  border-width: 25px;
+  box-shadow: 0px 0px 20px rgba(238, 232, 59, 0.355); 
+  z-index: 3;
+}
+
+.Tree{
+  z-index: -1;
+}
+
+.tree{
+  
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 6;
+  margin-left: 0px;
+  margin-top: 30px;
+}
+.tree1{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 6;
+  margin-left: 1%;
+  margin-top: 30px;
+}
+.tree2{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 6;
+  margin-left: 50%;
+  margin-top: 20px;
+}
+.tree3{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 6;
+  margin-left: 40%;
+  margin-top: 20px;
+}
+
+.Tree{
+  display: block;
+}
+
+
+.santa{
+  position: absolute;
+  height: 20%;
+  width: 10%;
+  z-index: 4;
+  animation: move 10s ease-in-out infinite, sway 3s ease-in-out infinite ;
+}
+
+@keyframes move {
+  0%{
+    left: -10%;
+  }
+  100%{
+    left: 99%
+  }
+}
+
+@keyframes sway {
+  0%{
+    transform: translateY(-10px);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+  
+}
+
+
+.cloud14{
+  position: absolute;
+  z-index: 2;
+  height: 400px;
+  width: 400px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  margin-top: -300px;
+  margin-left: -100px; 
+}
+.cloud15{
+  position: absolute;
+  z-index: 2;
+  height: 400px;
+  width: 400px;
+  background-color: rgba(240, 248, 255, 0.826);
+  border-radius: 50%;
+  margin-top: -200px;
+  margin-left: 150px;
+  
+}
+.cloud16{
+  position: absolute;
+  z-index: 2;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(240, 248, 255);
+  border-radius: 50%;
+  margin-top: -300px;
+  margin-left: 350px;
+}
+.cloud17{
+  position: absolute;
+  z-index: 2;
+  height: 400px;
+  width: 400px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  margin-top: -300px;
+  margin-left: 600px;
+}
+.cloud18{
+  position: absolute;
+  z-index: 2;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(240, 248, 255);
+  border-radius: 50%;
+  margin-top: -350px;
+  margin-left: 800px;
+}
+.cloud19{
+  position: absolute;
+  z-index: 2;
+  height: 400px;
+  width: 400px;
+  background-color: rgba(240, 248, 255, 0.778);
+  border-radius: 50%;
+  margin-top: -300px;
+  margin-left: 1050px;
+}
+.cloud20{
+  position: absolute;
+  z-index: 2;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(240, 248, 255);
+  border-radius: 50%;
+  margin-top: -350px;
+  margin-left: 1300px;
+} 
+.inner{
+  opacity: 0;
+  transition: 3s ease-in;
+}
+.show3{
+  opacity: 1;
+}
+
+.loidan{
+  position: absolute;
+  z-index: 5;
+  width: 700px;
+  height: 80px ;
+  border-radius: 5px;
+  background-color: aliceblue;
+ padding-left: 5px;
+ padding-top: 5px;
+ text-align: center;
+ top: 50%;
+ left: 35%;
+transition: all;
+}
+.clickme{
+  visibility: hidden;
+  animation: zoom 2s ease-in-out infinite;
+}
+
+@keyframes zoom {
+  0%{
+    scale: 0.9;
+    box-shadow: 0 0 30px rgba(142, 200, 218, 0.178);
+  }
+   50%{
+    scale: 1.2;
+    box-shadow: 0 0 30px rgba(142, 200, 218, 0.784);
+   }
+   100%{
+    scale: 0.9;
+    box-shadow: 0 0 30px rgba(142, 200, 218, 0.178);
+  }
+}
+
+
+.dung{
+  position: absolute;
+  height: 70px;
+  width: 140px;
+  left: 35%;
+  top: 70%;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  animation: zoom 2s ease-in-out infinite;
+}
+.sai{
+  position: absolute;
+  height: 70px;
+  width: 140px;
+  left: 65%;
+  top: 70%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.dung.clicked{
+  animation: zoom 2s ease-in-out infinite ;
+  font-size: 30px;
+  font-weight: bolder;
+  left: 50%;
+  transition: 0.4s ease-in;
+}
+
+.dung.clicked:hover{
+  background-color: yellow;
+  color: rgb(95, 113, 129);
+}
