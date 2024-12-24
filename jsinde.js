@@ -76,13 +76,16 @@ const message = textElement.innerText; // Lấy nội dung của h1
 
   // Lấy phần tử thẻ
   const cards = document.querySelectorAll('.card');
-  
+  const cardinner = document.querySelector('.card-inner');
+  const cardfront = document.querySelector('.card-front');
   // Lắng nghe sự kiện click trên mỗi thẻ
   cards.forEach(card => {
       card.addEventListener('click', function() {
           // Thêm hoặc gỡ lớp 'flip' để kích hoạt hiệu ứng lật
           card.classList.toggle('flip');
           card.classList.toggle('.move')
+          cardfront.style.boxShadow = '0px 10px 20px rgb(202, 231, 242)'; 
+          cardinner.style.boxShadow = '0px 10px 20px rgb(202, 231, 242)';
       });
   });
 

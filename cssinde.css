@@ -46,7 +46,7 @@ body {
     margin-top: 0px;
     height: 100%;
     width: 100%;
-    background-image: url(650.jpg);
+    background-image: url(/650.jpg);
     visibility: hidden;/* Ẩn phần tử ban đầu */
     opacity: 0; /* Đặt độ mờ ban đầu là 0 */
     transform: translateY(-200px); /* Đặt vị trí ban đầu là một chút bên trên */
@@ -62,7 +62,7 @@ body {
   .clickme {
     
     margin-top: 70vh; /* Đặt button ở giữa theo chiều dọc */
-    margin-left: 50%; /* Đặt button ở giữa theo chiều ngang */
+    margin-left: 45%; /* Đặt button ở giữa theo chiều ngang */
     height: 100px;
     width: 250px;
     border-radius: 20px;
@@ -112,14 +112,13 @@ body {
       opacity: 0; /* Mờ dần khi kết thúc */
     }
 }
-.hand i{
+.hand .i{ position: absolute;
     z-index: 10;
     height: 50px;
     width: 50px;
     font-size: 50px;
-    margin-top: -100%;
+    margin-top: 0px;
     margin-left: 57%;
-
     animation: touched 2s ease-in-out infinite;
 }
 
@@ -351,8 +350,8 @@ body {
   .card {
     cursor: pointer;
     position: absolute;
-    width: 500px;
-    height: 700px;
+    width: 400px;
+    height: 600px;
     perspective: 1000px; /* Tạo hiệu ứng 3D */
     margin-left: 40%;
     margin-top: 4%;
@@ -361,6 +360,7 @@ body {
     opacity: 0; /* Đảm bảo thẻ không hiển thị khi ẩn */
     transition: opacity 1s ease; /* Thêm hiệu ứng mờ dần */
 }
+
 .di1{
   position: relative;
 }
@@ -405,7 +405,7 @@ body {
 }
 
 .card-front {
-    background-color: #ff5555;
+    background-color: #c91111;
     color: white;
     z-index: 2; /* Giữ mặt trước ở trên */
     transform-origin: left; /* Lật từ cạnh trái */
